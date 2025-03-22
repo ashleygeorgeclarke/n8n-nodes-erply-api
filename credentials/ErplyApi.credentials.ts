@@ -14,12 +14,6 @@ export class ErplyApi implements ICredentialType {
 
 	properties: INodeProperties[] = [
 		{
-			displayName: 'Auth proxy',
-			name: 'authProxy',
-			type: 'string',
-			default: '',
-		},
-		{
 			displayName: 'Client Code',
 			name: 'clientCode',
 			type: 'string',
@@ -47,6 +41,13 @@ export class ErplyApi implements ICredentialType {
 			name: 'useJwt',
 			type: 'boolean',
 			default: false,
+		},
+		{
+			displayName: 'Auth proxy',
+			description: 'Optional. A full URL for the verifyUser call, returning a session key and jwt',
+			name: 'authProxy',
+			type: 'string',
+			default: '',
 		},
 	];
 
